@@ -171,7 +171,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://poynt2005.github.io/2020/05/21/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">
+    <link itemprop="mainEntityOfPage" href="http://poynt2005.github.io/2020/05/22/PaaS%E5%B9%B3%E5%8F%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -185,7 +185,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/05/21/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="post-title-link" itemprop="url">第一篇文章</a>
+            <a href="/2020/05/22/PaaS%E5%B9%B3%E5%8F%B0/" class="post-title-link" itemprop="url">PaaS平台</a>
         </h2>
 
         <div class="post-meta">
@@ -194,16 +194,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
+              
 
-              <time title="創建時間：2020-05-21 18:38:45" itemprop="dateCreated datePublished" datetime="2020-05-21T18:38:45+08:00">2020-05-21</time>
+              <time title="創建時間：2020-05-22 12:19:34 / 修改時間：12:26:01" itemprop="dateCreated datePublished" datetime="2020-05-22T12:19:34+08:00">2020-05-22</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-05-22 00:31:14" itemprop="dateModified" datetime="2020-05-22T00:31:14+08:00">2020-05-22</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -225,46 +219,90 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>這是我的第一篇部落格文章，之前沒有寫過部落格，想說今天就來試試。<br>Hexo安裝並沒有非常複雜，比想像中的簡單</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
-<p>這一行就可以做全局安裝，並沒有什麼需要額外配置的地方<br>部屬平台就選github吧，純前端也不需要什麼後台的功能，<br>github page就完事了<br>_config.yml就問google大神怎麼設定就好，一些常用的配置稍微記一下，<br>反正也很快就忘，忘了再找google大神就好</p>
-<p>也不知道有什麼好寫的，總之今天一直在下雨，外面風很大，出去吃個飯還要撐傘。<br>整天下雨不知道在下三小，明明前幾天都還很熱，也不知道前幾天在熱三小= =</p>
-<hr>
-<h2 id="編程方面"><a href="#編程方面" class="headerlink" title="編程方面"></a><font style="color: orange">編程方面</font></h2><h3 id="網頁"><a href="#網頁" class="headerlink" title="網頁"></a>網頁</h3><p>前端真的不太行，還在研究中<br>目前在研究flexbox，使用flexbox排版蠻方便的<br>只能說每遇到一個坑，就是給自己的一個學習機會吧。。。</p>
-<h3 id="express"><a href="#express" class="headerlink" title="express"></a>express</h3><p>今天把之前在VPS上的網站重新用express-generator重寫一次，之前並沒有使用MVC的方法來寫網站，<br>各種router處理，各種middleware、甚至連data處理的部分都全部塞在同一個app.js(我甚至還沒把不同的router分開處理)，<br>導致代碼的結構很亂，可能幾個禮拜後就看不懂自己在寫三小了<br>而且目前已經有幾個代碼我現在已經看不懂了</p>
-<p>最近接觸<a href="https://github.com/expressjs/generator#readme" target="_blank" rel="noopener">express-generator</a>，發現很好用<br>使用express-generator可以快速產生一個express的框架，常用的依賴包都有自動寫在package.json裡面<br>只要下個npm install命令直接全部裝完，<br>express主要的instance app.js內，各種常用的middleware都幫事先設定好，不用再一個一個慢慢寫<br>Router的部分則會放在routes的目錄內，直接在裡面新增就好<br>算是很方便的</p>
-<p>不過以express-generator方式產生的專案，並不會分開路由控制、control、model<br>而是全部都在router裡面，所以要使用MVC的架構來開發的話最好還是自己設定</p>
-<p>而這次主要把之前架在VPS上的網站Router再模塊化，不同組件做不同的事，不要全部塞在一起<br>不過目前沒有把Controller部分與router部分分開，只有把資料處理部分分出去而已，<br>因為本身網站並沒有要幹什麼複雜的事情。。。</p>
-<h3 id="WebSocket"><a href="#WebSocket" class="headerlink" title="WebSocket"></a>WebSocket</h3><p>目前寫chat.thuocduame遇到的<br>如果把websocket寫在使用express-generator產生的框架裡，<br>必須要改一下./bin/的www檔案，不想另外開一個server給ws<br>所以ws必須要attach到express的server下，<br>而我想在某個router下使用ws，問題就來了<br>建一個ws必須要給定一個http server的實例，<br>但是問題是在默認的情況下，是在www這個檔案建立http的<br>app在app.js中處理好一切路由，export出來，在www裡面將app attach到http實例上<br>所以想要建立ws就必須要跟將ws建在www裡面<br>不過問題是我TM就是想在router處理中順便處理ws。。。<br>找了express-ws發現這是一個坑，我按照官方的demo下去操作，前端連線過去還是一直顯示404，是在4三小，草<br>想了一個折衷的方案，就是把http.createServer跟express.app()寫在app.js中，像這樣</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">var http &#x3D; require(&#39;http&#39;);</span><br><span class="line">var ws &#x3D; require(&quot;ws&quot;);</span><br><span class="line">...</span><br><span class="line">var server &#x3D; http.createServer(app);</span><br><span class="line">wss &#x3D; ws.Server(&#123;</span><br><span class="line">	server: server,</span><br><span class="line">	path: &quot;某個route&quot;</span><br><span class="line">&#125;);</span><br><span class="line">...</span><br><span class="line">&#x2F;&#x2F;wss再require某個函式做處理</span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">	app: app,</span><br><span class="line">	server: server</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>目前能想到的方法就這樣了，依照express-generator的寫法來看，感覺這樣不太好<br>主要的處理程式app.js跟http.createServer是分開成為不同的模塊的<br>不過這種寫法把他們放在一起= =<br>還有express-ws這鬼東西坑了我好幾的小時，草</p>
-<h3 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h3><p>上網查了一下nginx的用法，掛個反向代理來處理請求，<br>nginx的用法目前還需要多研究，主要是<br>不過光是解決SSL證書配置的步驟就簡便很多，<br>直接將證書丟給nginx，後端不用動也沒關系<br>只要給nginx知道後端在哪裡就好，nginx會自動設定<br>nginx也可以隱藏後端的真實port，用戶端的請求由nginx來代理就行<br>http的請求也可以寫個簡單的幾行代碼，自動redirect到https<br>強制所有的連線都經過https，<br>是一個功能很強大的軟體，<br>現在剛接觸，也還在研究中<br>之後寫網站都要使用nginx做反代了<br>毛子還真牛逼</p>
-<h3 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h3><p>這幾天也研究了一下Docker的用法，<br>虛擬化這東西我很有興趣，<s>但可能知識量一點點皮毛都不到</s><br>這東西剛火起來的時候我沒去接觸，現在才開始接觸。。。<br>自己是看<a href="https://philipzheng.gitbook.io/docker_practice/" target="_blank" rel="noopener">這篇教程</a>，很詳細<br>總之這東西也真的很牛，相比傳統的VM，這種hypervisor控制的虛擬機器，<br>佔用了os不少的資源、啟動速度慢，配置差點的host搞不好跑不動…等等的缺點，<br>Docker這種OS層的虛擬化，更能充分利用host的資源，啟動速度快，容器間也相互隔離互不影響<br>只要鏡像建好，所需的運行環境都可以打包起來，<br>不管到哪個平台，只要有docker引擎就可以直接跑，<br>部屬的速度真的快，今天想換平台，直接pull下來就行，真D牛逼<br>目前寫的node.js程式 網站啥的，我都盡量用docker打包，<br>現在有些網站是建在heroku上，如果想換平台不用多久的功夫直接搬過去，<br>省下配置的麻煩了，沒什麼好說，就只能說docker牛逼<br>container這種技術不愧是未來虛擬化的趨勢，大家都在搞<br>真D後悔太晚接觸。。。<br>如果Docker學得差不多了應該就會來學docker swarm</p>
-<h3 id="PaaS平台"><a href="#PaaS平台" class="headerlink" title="PaaS平台"></a>PaaS平台</h3><p>目前找了許多平台，不是要花錢，就是免費限制太TM多<br>我的要求: 免費(without 信用卡)、custom domain、不要動不動就刪專案、私人，沒了<br>不過我目前沒有找到能符合上述例子的</p>
-<p>舉例來說: </p>
-<ol>
-<li>Heroku: free plan各方面都很不錯，Dyno需要信用卡認證，郵局的debit card就是刷不過，草，最主要是認證過後可以使用custom domain，免費的不能，特地找了毛子的Yandex.money開了一張VCC，還是怎麼都刷不過，草，聽說某寶有賣代認證服務，只要7R，可是就是TM被下架。。。</li>
-<li>Openshift: 以前免費，現在每過60天專案就會被重製，馬的，<s>紅帽不是很邱</s></li>
-<li>AWS、GCP、Azure: 不用說了，沒信用卡</li>
-<li>groom.io: 這平台好像搞online ide的，不過有開放工作站和ssh，不過拿這個架站應該分分鐘被封號吧</li>
-<li>kubesail: Container為主，免費版能綁域名、單核CPU、512MB內存，看起來是不錯，但就TM不支援私有鏡像，草，拿來架科學上網差不多吧= =</li>
-<li>Okteto: 也是Container平台，Free Plan不支援自己上傳鏡像，只能用官方的，不知道開放免費版有三小用= =</li>
-<li>IBM Cloud: 主要使用cloud foundry，註冊郵箱有限制，30天沒開發活動就刪檔，不知道什麼是他所謂的開發活動，CF部屬好像也比較複雜，沒有去研究</li>
-</ol>
-<p>試來試去還是Heroku最好，就是沒有custom domain= =<br>免費的服務還真就只有heroku最適合我了。。。</p>
-<p>再來幾個比較坑的</p>
-<ol>
-<li>Daocloud: 免費膠囊主機死活都連不上，docker建好完全不能部屬，浪費我好久時間，客服永遠不在線，<s>我懷疑是不是倒閉了</s></li>
-<li>三X雲、阿X雲: 要實名認證 + 到處打廣告，才能延長免費時數，不用實名認證的只是一個PHP平台，還難用得要死，SB平台</li>
-<li>coding.net: 總體上還算不錯，不過網路連接真的慢，建proxy好幾個網站上不了</li>
-</ol>
-<p>找免費PaaS平台也遇到很多坑，通常都要信用卡認證，要架個小網站、搞個聊天機器人Webhook之類的還是Heroku吧<br>兜了好大一圈還是落在Heroku上</p>
-<hr>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a><font style="color: orange">其他</font></h2><h3 id="守望先鋒之亂"><a href="#守望先鋒之亂" class="headerlink" title="守望先鋒之亂"></a>守望先鋒之亂</h3><p>昨天蘇寧在送守望先鋒暢玩版，然後某寶各大店商也陸續加入<br>keylol上也到處都是這個的信息，<br>蘇寧網頁可以抽獎，但是我沒大陸手機號不能註冊帳號，mmp<br>後來看壇裡老哥說可以關注蘇寧微信公眾號參加，<br>TM加了好幾十個公眾號，沒一個發給我的，<br>垃圾信息還一直推送，沒發給老子碼還發三小，乾<br>後來在某寶三爽官方旗艦店買了一個0.01R的邀請鏈接，加入官方會員<br>也是等了很久客服才發碼，越等越抖，以為TM涼了。。。<br>然後壇子交易區一打開，全部都是賣守望先鋒碼的，<br>我想說呢，白嫖完馬上拿出來賣，這。。。不予置評= =</p>
-<h3 id="keylol鑑賞家"><a href="#keylol鑑賞家" class="headerlink" title="keylol鑑賞家"></a>keylol鑑賞家</h3><p>兩篇評測都被<a href="https://store.steampowered.com/curator/9730205-Keylol-Player-Club/" target="_blank" rel="noopener">keylol官方鑑賞家</a>推薦了，<br>開勳!!</p>
-<h3 id="爐石"><a href="#爐石" class="headerlink" title="爐石"></a>爐石</h3><p>最近比較少玩，昨天玩一把，笑死<br>機器人原本30血，幾乎都他在入人，對到我之後他直接沒命<br>之後我每對上一個人，對方直接死，<br>爽</p>
-<p><img src="/2020/05/21/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/hs.png" alt="爐石昨天"></p>
+          <h1 id="PaaS平台"><a href="#PaaS平台" class="headerlink" title="PaaS平台"></a>PaaS平台</h1><p>目前找了許多平台，不是要花錢，就是免費限制太TM多<br>我的要求: 免費(without 信用卡)、custom domain、不要動不動就刪專案、私人，沒了<br>不過我目前沒有找到能符合上述例子的</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/05/22/PaaS%E5%B9%B3%E5%8F%B0/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
 
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://poynt2005.github.io/2020/05/22/520%E7%B6%B2%E9%A0%81%E6%84%9F%E6%83%B3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Steve Chung">
+      <meta itemprop="description" content="我的個人部落格">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="poynt2005's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/22/520%E7%B6%B2%E9%A0%81%E6%84%9F%E6%83%B3/" class="post-title-link" itemprop="url">520網頁感想</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2020-05-22 11:44:06 / 修改時間：12:18:39" itemprop="dateCreated datePublished" datetime="2020-05-22T11:44:06+08:00">2020-05-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%B7%A8%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">編程</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="編程方面"><a href="#編程方面" class="headerlink" title="編程方面"></a><font style="color: orange">編程方面</font></h1><h2 id="網頁"><a href="#網頁" class="headerlink" title="網頁"></a>網頁</h2><p>前端真的不太行，還在研究中<br>目前在研究flexbox，使用flexbox排版蠻方便的<br>只能說每遇到一個坑，就是給自己的一個學習機會吧。。。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/05/22/520%E7%B6%B2%E9%A0%81%E6%84%9F%E6%83%B3/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -281,6 +319,9 @@
 
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
+  </nav>
 
 
 
@@ -345,20 +386,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>

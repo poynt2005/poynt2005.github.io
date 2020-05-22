@@ -20,22 +20,23 @@
     var CONFIG = {"hostname":"poynt2005.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="前言這是我的第一篇部落格文章，之前沒有寫過部落格，想說今天就來試試。Hexo安裝並沒有非常複雜，比想像中的簡單">
+  <meta name="description" content="Docker初學這幾天也研究了一下Docker的用法，虛擬化這東西我很有興趣，但可能知識量一點點皮毛都不到這東西剛火起來的時候我沒去接觸，現在才開始接觸。。。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一篇文章">
-<meta property="og:url" content="http://poynt2005.github.io/2020/05/21/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/index.html">
+<meta property="og:title" content="docker初學">
+<meta property="og:url" content="http://poynt2005.github.io/2020/05/22/docker%E5%88%9D%E5%AD%B8/index.html">
 <meta property="og:site_name" content="poynt2005&#39;s blog">
-<meta property="og:description" content="前言這是我的第一篇部落格文章，之前沒有寫過部落格，想說今天就來試試。Hexo安裝並沒有非常複雜，比想像中的簡單">
+<meta property="og:description" content="Docker初學這幾天也研究了一下Docker的用法，虛擬化這東西我很有興趣，但可能知識量一點點皮毛都不到這東西剛火起來的時候我沒去接觸，現在才開始接觸。。。">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="http://poynt2005.github.io/2020/05/21/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/hs.png">
-<meta property="article:published_time" content="2020-05-21T10:38:45.000Z">
-<meta property="article:modified_time" content="2020-05-22T04:27:57.045Z">
+<meta property="og:image" content="https://miro.medium.com/max/600/1*EaZEiFvTmCzmkSZcMOBYLw.png">
+<meta property="og:image" content="http://poynt2005.github.io/2020/05/22/docker%E5%88%9D%E5%AD%B8/VM.png">
+<meta property="article:published_time" content="2020-05-22T02:45:19.000Z">
+<meta property="article:modified_time" content="2020-05-22T03:43:24.642Z">
 <meta property="article:author" content="Steve Chung">
-<meta property="article:tag" content="日記">
+<meta property="article:tag" content="編程">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://poynt2005.github.io/2020/05/21/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/hs.png">
+<meta name="twitter:image" content="https://miro.medium.com/max/600/1*EaZEiFvTmCzmkSZcMOBYLw.png">
 
-<link rel="canonical" href="http://poynt2005.github.io/2020/05/21/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">
+<link rel="canonical" href="http://poynt2005.github.io/2020/05/22/docker%E5%88%9D%E5%AD%B8/">
 
 
 <script id="page-configurations">
@@ -48,7 +49,7 @@
   };
 </script>
 
-  <title>第一篇文章 | poynt2005's blog</title>
+  <title>docker初學 | poynt2005's blog</title>
   
 
 
@@ -174,7 +175,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://poynt2005.github.io/2020/05/21/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">
+    <link itemprop="mainEntityOfPage" href="http://poynt2005.github.io/2020/05/22/docker%E5%88%9D%E5%AD%B8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -187,7 +188,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          第一篇文章
+          docker初學
         </h1>
 
         <div class="post-meta">
@@ -196,23 +197,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
+              
 
-              <time title="創建時間：2020-05-21 18:38:45" itemprop="dateCreated datePublished" datetime="2020-05-21T18:38:45+08:00">2020-05-21</time>
+              <time title="創建時間：2020-05-22 10:45:19 / 修改時間：11:43:24" itemprop="dateCreated datePublished" datetime="2020-05-22T10:45:19+08:00">2020-05-22</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-05-22 12:27:57" itemprop="dateModified" datetime="2020-05-22T12:27:57+08:00">2020-05-22</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分類於</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/miscellaneous/" itemprop="url" rel="index"><span itemprop="name">雜記</span></a>
+                  <a href="/categories/experience/" itemprop="url" rel="index"><span itemprop="name">experience</span></a>
                 </span>
             </span>
 
@@ -227,19 +222,32 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>這是我的第一篇部落格文章，之前沒有寫過部落格，想說今天就來試試。<br>Hexo安裝並沒有非常複雜，比想像中的簡單</p>
+        <h1 id="Docker初學"><a href="#Docker初學" class="headerlink" title="Docker初學"></a>Docker初學</h1><p>這幾天也研究了一下Docker的用法，<br>虛擬化這東西我很有興趣，<s>但可能知識量一點點皮毛都不到</s><br>這東西剛火起來的時候我沒去接觸，現在才開始接觸。。。</p>
 <a id="more"></a>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
-<p>這一行就可以做全局安裝，並沒有什麼需要額外配置的地方<br>部屬平台就選github吧，純前端也不需要什麼後台的功能，<br>github page就完事了<br>_config.yml就問google大神怎麼設定就好，一些常用的配置稍微記一下，<br>反正也很快就忘，忘了再找google大神就好</p>
-<p>也不知道有什麼好寫的，總之今天一直在下雨，外面風很大，出去吃個飯還要撐傘。<br>整天下雨不知道在下三小，明明前幾天都還很熱，也不知道前幾天在熱三小= =</p>
-<hr>
-<h1 id="守望先鋒之亂"><a href="#守望先鋒之亂" class="headerlink" title="守望先鋒之亂"></a>守望先鋒之亂</h1><p>昨天蘇寧在送守望先鋒暢玩版，然後某寶各大店商也陸續加入<br>keylol上也到處都是這個的信息，<br>蘇寧網頁可以抽獎，但是我沒大陸手機號不能註冊帳號，mmp<br>後來看壇裡老哥說可以關注蘇寧微信公眾號參加，<br>TM加了好幾十個公眾號，沒一個發給我的，<br>垃圾信息還一直推送，沒發給老子碼還發三小，乾<br>後來在某寶三爽官方旗艦店買了一個0.01R的邀請鏈接，加入官方會員<br>也是等了很久客服才發碼，越等越抖，以為TM涼了。。。<br>然後壇子交易區一打開，全部都是賣守望先鋒碼的，<br>我想說呢，白嫖完馬上拿出來賣，這。。。不予置評= =</p>
-<hr>
-<h1 id="keylol鑑賞家"><a href="#keylol鑑賞家" class="headerlink" title="keylol鑑賞家"></a>keylol鑑賞家</h1><p>兩篇評測都被<a href="https://store.steampowered.com/curator/9730205-Keylol-Player-Club/" target="_blank" rel="noopener">keylol官方鑑賞家</a>推薦了，<br>開勳!!<br>感謝管理對小弟的肯定。。。</p>
-<hr>
-<h1 id="爐石"><a href="#爐石" class="headerlink" title="爐石"></a>爐石</h1><p>最近比較少玩，昨天玩一把，笑死<br>機器人原本30血，幾乎都他在入人，對到我之後他直接沒命<br>之後我每對上一個人，對方直接死，<br>爽</p>
-<p><img src="/2020/05/21/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/hs.png" alt="爐石昨天"></p>
+<p>自己是看<a href="https://philipzheng.gitbook.io/docker_practice/" target="_blank" rel="noopener">這篇教程</a>，很詳細</p>
+<p>
+    <img src="https://miro.medium.com/max/600/1*EaZEiFvTmCzmkSZcMOBYLw.png" style="margin: 0 0">
+    ↑這是網路上找到的比較圖
+</p>
+
+<p>像Docker這種輕量的虛擬化技術，一般稱為Container<br>可以看到傳統的VM架構下，以Hypervisor運行的虛擬機，每個虛擬機都還有Guest OS，程序跑在Guest OS上<br>換成Container，沒有Guest OS了，直接就是跑在Docker Engine上</p>
+<p>總之這東西也真的很牛，相比傳統的VM，這種hypervisor控制的虛擬機器，<br>佔用了os不少的資源、啟動速度慢，配置差點的host搞不好跑不動…等等的缺點，<br>Docker這種OS層的虛擬化，更能充分利用host的資源，啟動速度快，容器間也相互隔離互不影響<br>傳統VM，實在是浪費了不少額外的資源，況且傳統VM要安裝一個Guest OS，又會占用很多容量<br>而Docker的Image則是容量非常的小，了不起幾百MB吧。。。</p>
+<p>只要鏡像建好，所需的運行環境都可以打包起來，<br>不管到哪個平台，只要有docker引擎就可以直接跑，<br>部屬的速度真的快，今天想換平台，直接pull下來就行，真D牛逼<br>目前寫的node.js程式 網站啥的，我都盡量用docker打包，<br>現在有些網站是建在heroku上，如果想換平台不用多久的功夫直接搬過去，<br>省下配置的麻煩了，沒什麼好說，就只能說docker牛逼<br>container這種技術不愧是未來虛擬化的趨勢，大家都在搞<br>下一代真的要靠它主宰了<br>真D後悔太晚接觸。。。<br>如果Docker學得差不多了應該就會來學docker swarm</p>
+<h1 id="Docker-Toolbox"><a href="#Docker-Toolbox" class="headerlink" title="Docker Toolbox"></a>Docker Toolbox</h1><p>因為Docker目前只支持Linux OS，所以想在Windows上跑Docker只有使用VMㄌ，別無他法<br>官方有提供Docker for windows，阿不過這東西必須要用hyper-v，<br>之前被hyper-v雷過，所以不考慮<br>就使用官方提供的另一個Docker Toolbox<br>這東西呢，就是用甲骨文的Virtualbox安裝一個Linux OS來使用docker<br>使用的是tiny core linux，是精簡到不行、體積超小的Linux distribution<br>安裝Docker Toolbox也會自動安裝一些必要的軟體到電腦中，比如說git啥的<br>預設的VM安裝目錄會在%USERPROFILE%.docker這個資料夾<br>如果想要改預設資料夾的話，在環境變數裡面加一個DOCKER_CERT_PATH，並指向指定的目錄就行<br>安裝完toolbox之後，桌面上出現Docker quickstart terminal就可以安裝docker<br>不過我在這邊碰到坑了，安裝的時候顯示沒開啟CPU的虛擬化，草<br><img src="/2020/05/22/docker%E5%88%9D%E5%AD%B8/VM.png" alt="安裝"><br>我TM明明就啟用模擬，是在哈囉?</p>
+<p>不過後來在stackovweflow找到解決方法，在Docker Toolbox安裝目錄下找到”start.sh”這個檔案<br>記事本打開，找到</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;DOCKER_MACHINE&#125;&quot; create -d virtualbox $PROXY_ENV &quot;$&#123;VM&#125;</span><br></pre></td></tr></table></figure>
+<p>改成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;DOCKER_MACHINE&#125;&quot; create -d virtualbox --virtualbox-no-vtx-check $PROXY_ENV &quot;$&#123;VM&#125;</span><br></pre></td></tr></table></figure>
+<p>看起來是禁用vtx的檢測，<br>我想說我的電腦是AMD CPU阿，哪來的vtx阿，不會測試有沒有AMD-V喔。。。</p>
+<p>然後最後圖案有跑出一隻鯨魚就OK了<br>這邊我還要特別提一點，<br>virtualbox裡面的VM建好之後</p>
+<blockquote>
+<p><font style="color:red">VM不要關機!!</font><br><font style="color:red">VM不要關機!!</font><br><font style="color:red">VM不要關機!!</font></p>
+</blockquote>
+<p><s>很重要所以說三次</s><br>我關機之後，想重新使用CMD Docker指令再連回去VM，發現會一直卡在取得IP的狀態，<br>完全連不回去，使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-machine default restart</span><br></pre></td></tr></table></figure>
+<p>一樣還是獲得不了IP，只能把virtualbox VM刪掉，再重新用Docker quickstart terminal新建VM<br>後來實測，如果真的要關機的話，一定要用save state，把當前環境儲存下來<br>開docker之前，先把state restore回去，這樣再windows操作docker就可以正常使用</p>
+<p>總之，docker要學的東西還很多，加把勁吧</p>
 
     </div>
 
@@ -249,7 +257,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/daily/" rel="tag"># 日記</a>
+              <a href="/tags/programming/" rel="tag"># 編程</a>
           </div>
 
         
@@ -257,10 +265,13 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2020/05/22/docker%E5%88%9D%E5%AD%B8/" rel="next" title="docker初學">
-      docker初學 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/05/21/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" rel="prev" title="第一篇文章">
+      <i class="fa fa-chevron-left"></i> 第一篇文章
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/05/22/520%E7%B6%B2%E9%A0%81%E6%84%9F%E6%83%B3/" rel="next" title="520網頁感想">
+      520網頁感想 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -320,7 +331,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#守望先鋒之亂"><span class="nav-number">2.</span> <span class="nav-text">守望先鋒之亂</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#keylol鑑賞家"><span class="nav-number">3.</span> <span class="nav-text">keylol鑑賞家</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#爐石"><span class="nav-number">4.</span> <span class="nav-text">爐石</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker初學"><span class="nav-number">1.</span> <span class="nav-text">Docker初學</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker-Toolbox"><span class="nav-number">2.</span> <span class="nav-text">Docker Toolbox</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
